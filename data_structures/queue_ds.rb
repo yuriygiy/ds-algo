@@ -72,4 +72,3 @@ p queue.peek
 p queue.size
 
 p queue
-
