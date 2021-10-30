@@ -18,11 +18,11 @@
 # O(n)
 
 class StackDs
-  attr_reader :stack, :size
+  attr_reader :stack, :max_size
 
-  def initialize(size = nil)
-    @stack = []
-    @size  = size
+  def initialize(max_size = nil)
+    @stack    = []
+    @max_size = max_size
   end
 
   # Push: Add an element to the top of a stack
@@ -42,12 +42,17 @@ class StackDs
 
   # IsFull: Check if the stack is full
   def is_full?
-    stack.length == size if size
+    size == max_size if max_size
   end
 
   # Peek: Get the value of the top element without removing it
   def peek
     stack.last unless is_empty?
+  end
+
+  # Size: for sized stack
+  def size
+    stack.length
   end
 end
 
@@ -64,4 +69,6 @@ p stack.is_empty?
 p stack.is_full?
 
 p stack.peek
+p stack.size
+
 p stack
