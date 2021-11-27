@@ -57,3 +57,6 @@ build-iPhoneSimulator/
 
 #IDE
 .idea/
+
+#OS files
+.DS_Store
